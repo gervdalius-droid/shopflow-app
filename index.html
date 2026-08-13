@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ShopFlow — Production, at a glance</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪚</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="modal-root"></div>
+  <div id="drawer-root"></div>
+  <div id="toast-root"></div>
+  <div id="palette-root"></div>
+  <script src="icons.js"></script>
+  <script src="i18n.js"></script>
+  <script src="data.js"></script>
+  <script src="realdata.js"></script>
+  <script src="app.js"></script>
+  <script src="manager.js"></script>
+  <script src="worker.js"></script>
+  <script src="wb.js"></script>
+  <script src="scan.js"></script>
+  <script src="gpm.js"></script>
+  <script src="sync-config.js" onerror="/* no cloud config yet — runs local */"></script>
+  <script src="sync.js"></script>
+  <script>App.boot()</script>
+</body>
+</html>
