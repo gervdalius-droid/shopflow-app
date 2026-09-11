@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ShopFlow — Production, at a glance</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪚</text></svg>">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0071e3">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ShopFlow">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="styles.css?v=a2729ca">
+  <meta name="shopflow-build" content="a2729ca">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="modal-root"></div>
+  <div id="drawer-root"></div>
+  <div id="toast-root"></div>
+  <div id="palette-root"></div>
+  <script src="icons.js?v=a2729ca"></script>
+  <script src="i18n.js?v=a2729ca"></script>
+  <script src="data.js?v=a2729ca"></script>
+  <script src="realdata.js?v=a2729ca"></script>
+  <script src="app.js?v=a2729ca"></script>
+  <script src="manager.js?v=a2729ca"></script>
+  <script src="worker.js?v=a2729ca"></script>
+  <script src="wb.js?v=a2729ca"></script>
+  <script src="scan.js?v=a2729ca"></script>
+  <script src="gpm.js?v=a2729ca"></script>
+  <script src="swood.js?v=a2729ca"></script>
+  <script src="reports.js?v=a2729ca"></script>
+  <!-- shared customers + document index. Both are optional: if the hub is not
+       deployed, core.js 404s and bridge.js quietly does nothing. -->
+  <script src="../hub/core.js" onerror="/* hub not deployed — ShopFlow runs alone */"></script>
+  <script src="bridge.js?v=a2729ca"></script>
+  <script src="sync-config.js?v=a2729ca" onerror="/* no cloud config yet — runs local */"></script>
+  <script src="sync.js?v=a2729ca"></script>
+  <script>App.boot()</script>
+</body>
+</html>
