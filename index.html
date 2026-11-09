@@ -125,6 +125,12 @@
   <script src="bridge.js?v=dbl1109b"></script>
   <script src="sync-config.js?v=dbl1109b" onerror="/* no cloud config yet — runs local */"></script>
   <script src="sync.js?v=dbl1109b"></script>
+  <!-- Dėdės Baldai notices: popups + phone notifications. ShopFlow shows its own
+       mentions/tasks itself, so those are only pushed, not popped here. -->
+  <script>window.NOTICES_CFG = { side: "right", bottom: 92, inset: 25, z: 65, skipKinds: ["shopflow"],
+    person: function () { try { return (typeof App !== "undefined" && App.me) ? { id: App.me.id, name: App.me.name } : null; } catch (e) { return null; } } };</script>
+  <script src="../hub/workers/workshop-auth.js" onerror="/* hub not reachable — no notices */"></script>
+  <script src="../hub/shared/notices.js" defer onerror="/* hub not reachable — no notices */"></script>
   <script>App.boot().catch(e => { console.error('[boot]', e); document.body.innerHTML = '<p style="font:15px system-ui;padding:40px">ShopFlow could not start: ' + (e && e.message || e) + '</p>'; })</script>
 </body>
 </html>
