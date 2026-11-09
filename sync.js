@@ -347,7 +347,7 @@ var Sync = {
     var s = Store.state;
     return `<div class="login-screen"><div class="pin-stage" style="gap:4px">
       <div class="login-logo"><div class="mark" style="color:var(--accent)">${icon("logo", 52, "", 1.6)}</div>
-        <h1>${esc(s.shopName || "ShopFlow")}</h1>
+        <h1>ShopFlow</h1>
         <p>${this.checking ? "Connecting…" : "Sign in to your workspace"}</p></div>
       ${this.checking ? `<div class="sync-spinner"></div>` : `
         <div class="field" style="width:280px"><input class="input" id="shop-pass" type="password" placeholder="Shop password" autocomplete="current-password"></div>

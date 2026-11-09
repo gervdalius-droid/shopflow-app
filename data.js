@@ -1521,7 +1521,7 @@ function seedData() {
       firstSeenAt: now
     },
     perms: JSON.parse(JSON.stringify(DEFAULT_PERMS)),
-    shopName: "Gervinsko Baldai",
+    shopName: "Dėdės Baldai",
     pinSalt,
     notifications,
     gprojects: seedPlanner(members),
@@ -1722,6 +1722,7 @@ var Store = {
   /* Upgrade older saved states in place (never lose user edits) */
   migrate() {
     var s = this.state;
+    if (s && s.shopName === "Gervinsko Baldai") s.shopName = "Dėdės Baldai"; // old built-in default
     if (!s.v || s.v < 2) {
       if (!s.materials) s.materials = seedMaterials();
       if (!s.stockMoves) s.stockMoves = seedStockMoves();

@@ -788,7 +788,7 @@ var Login = {
       return `<div class="login-screen">
         <div class="login-logo">
           <div class="mark" style="color:var(--accent)">${icon("logo", 52, "", 1.6)}</div>
-          <h1>${esc(s.shopName)}</h1>
+          <h1>ShopFlow</h1>
           <p>Who's working?</p>
         </div>
         <div class="profiles">
@@ -799,7 +799,7 @@ var Login = {
               <span class="role">${esc(m.trade)}</span>
             </button>`).join("")}
         </div>
-        <div class="login-foot">ShopFlow · ${esc(s.shopName)}</div>
+        <div class="login-foot">ShopFlow</div>
       </div>`;
     }
     var m = this.selected;
